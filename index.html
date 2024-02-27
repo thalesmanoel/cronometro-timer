@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="query.css">
+    <title>Cronômetro/Temporizador</title>
+</head>
+<body>
+    <main>
+        <h1><p>Clique em cima do <strong>Cronômetro</strong> ou <strong>Timer</strong></p></h1>
+        <div class="fundo">
+            <div id="tipos" class="tipo-cron">
+                <p class="cronometro" onclick="cronClicado()" id="cronometrobtn">Cronômetro</p>
+                <p class="timer" onclick="timerClicado()" id="timerbtn">Timer</p>
+            </div>
+
+                <div class="numerador">
+
+                        <div id="timer" class="timer">00:00:00</div>
+
+                    <div class="inputs" id="inputs-none">
+                        <p><label for="hours">Horas:</label>
+                            <input type="number" id="hours" max="99" min="0" value="00">
+                        </p>
+                        <p><label for="minutes">Minutos:</label>
+                            <input type="number" id="minutes" max="59" min="0" value="00">
+                        </p>
+                        <p><label for="seconds">Segundos:</label>
+                            <input type="number" id="seconds" max="59" min="0" value="00">
+                        </p>
+                    </div>
+                
+                </div>
+
+                    <div id="opcoes" class="opcoes">
+                        <p class="zerar" onclick="zerarCron()">Zerar</p>
+                        <p class="parar" onclick="pausarCron()">Parar</p>
+                        <p class="iniciar" onclick="iniciarCron()" id="iniciar">Iniciar</p>
+                    </div>
+                
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
